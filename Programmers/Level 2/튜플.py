@@ -10,7 +10,6 @@ def solution(s):
         print(num)
         for j in num:
             n = int(j)
-            print(n)
             if n not in answer:
                 answer.append(n)
 
