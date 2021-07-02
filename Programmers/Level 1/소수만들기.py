@@ -1,6 +1,7 @@
 from itertools import combinations as c
 
 def solution(num):
+
     answer = 0
     comb = list(c(num,3))
     for n in comb:
