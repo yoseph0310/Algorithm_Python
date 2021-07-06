@@ -15,3 +15,5 @@ def sol2(n):
             num -= set(range(2*i, n+1, i))
 
     return len(num)
+
+print(sol2(1000000))
