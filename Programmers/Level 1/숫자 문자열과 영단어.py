@@ -17,6 +17,7 @@ def solution(s):
     for i, n in enumerate(eng):
         if n in s:
             s = s.replace(n, str(i))
+
     return int(s)
 
 print(solution('onetwothreefourfive6seven8nine'))
