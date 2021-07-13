@@ -9,7 +9,6 @@ def solution(N, stages):
             fail = cnt / len_stages
         answer.append((i, fail))
         len_stages -= cnt
-
     answer = sorted(answer, key=lambda t:t[1], reverse=True)
     answer = [i[0] for i in answer]
     return answer
