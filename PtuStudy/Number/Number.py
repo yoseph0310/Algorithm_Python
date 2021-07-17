@@ -1,4 +1,4 @@
-class Number(object):
+class Number:
 
     def __init__(self, number: int) -> None:
         self._number = number

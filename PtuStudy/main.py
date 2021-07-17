@@ -26,7 +26,7 @@ print(calculator.result)
 
 print(first_num == calculator.result)
 
-number_list = list()
+number_list: typing.List = list()
 
 for _ in range(10):
     number_list.append(
