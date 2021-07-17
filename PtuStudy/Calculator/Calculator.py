@@ -1,7 +1,9 @@
+from PtuStudy.Number import Number
+
 class Calculator:
-    def __init__(self, first_num: int, second_num: int):
-        self._first_num = first_num
-        self._second_num = second_num
+    def __init__(self, first_num: Number, second_num: Number):
+        self._first_num = first_num.number
+        self._second_num = second_num.number
         self._result = 0
 
     @property

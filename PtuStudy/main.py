@@ -8,8 +8,8 @@ first_num: Number = Number(2)
 second_num: Number = Number(3)
 
 calculator: Calculator = Calculator(
-    first_num=first_num.number,
-    second_num=second_num.number,
+    first_num=first_num,
+    second_num=second_num,
 )
 
 calculator.add()
@@ -24,7 +24,7 @@ print(calculator.result)
 calculator.sub()
 print(calculator.result)
 
-print(first_num.number == calculator.result)
+print(first_num == calculator.result)
 
 number_list = list()
 
