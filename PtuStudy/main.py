@@ -2,6 +2,7 @@ import random as rand
 import typing
 
 from PtuStudy.Calculator import Calculator
+from PtuStudy.Calculator import Calculator2
 from PtuStudy.Number import Number
 
 first_num: Number = Number(2)
@@ -12,14 +13,30 @@ calculator: Calculator = Calculator(
     second_num=second_num,
 )
 
+calculator2: Calculator2 = Calculator2(
+    first_num=first_num,
+    second_num=second_num,
+)
+
+# calculator2.add()
+# print(calculator2.result)
+
 calculator.add()
 print(calculator.result)
+
+# calculator2.mul()
+# print(calculator.result)
 
 calculator.mul()
 print(calculator.result)
 
+
+
 calculator.div()
 print(calculator.result)
+
+# calculator2.sub()
+# print(calculator.result)
 
 calculator.sub()
 print(calculator.result)
