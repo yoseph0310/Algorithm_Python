@@ -22,3 +22,4 @@ class Number:
 
     def __div__(self, other) -> int:
         return int(self._number / other)
+

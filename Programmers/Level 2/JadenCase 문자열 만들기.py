@@ -8,6 +8,5 @@ def solution(s):
         answer += i + " "
 
     return answer[:-1]
-
 s = "1.Hello my naMe is YoSEPh"
 print(solution(s))
