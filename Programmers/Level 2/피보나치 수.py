@@ -7,6 +7,4 @@ def solution(n):
             fibo = answer[i-1] + answer[i-2]
             answer.append(fibo % 1234567)
 
-
-
     return answer[-1]
