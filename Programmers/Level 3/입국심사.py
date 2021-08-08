@@ -1,7 +1,6 @@
 def solution(n, times):
     answer = 0
     times.sort()
-
     # 최대는 가장 오래걸리는 심사 * 인원 수
     left, right = 1, max(times) * n
 
