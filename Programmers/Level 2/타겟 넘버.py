@@ -7,7 +7,10 @@ def DFS(idx, numbers, target):
     if idx == len(numbers):
         if sum(numbers) == target:
             return 1
-        else: return 0
+
+        else:
+            return 0
+
     else:
         answer += DFS(idx + 1, numbers, target)
         numbers[idx] *= -1
