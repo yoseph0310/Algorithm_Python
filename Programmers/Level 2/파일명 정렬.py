@@ -1,4 +1,4 @@
-files = ["img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG"]
+files = ["F-5 1Freedom Fighter", "B-50 2Superfortress", "A-10 3Thunderbolt II", "F-14 4Tomcat"]
 
 def sol(files):
     answer = []
