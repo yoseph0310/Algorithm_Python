@@ -1,4 +1,4 @@
-def changecode(m):
+def changeCode(m):
     m = m.replace('C#', 'c')
     m = m.replace('D#', 'd')
     m = m.replace('F#', 'f')
@@ -7,21 +7,27 @@ def changecode(m):
 
     return m
 
-def sol(m, musicinfos):
+
+def getTime(st, et):
+    hour = 1 * (int(et.split(":")[0]) - int(st.split(":")[0]))
+    if hour == 0:
+        playtime = int(et.split(":")[1]) - int(st.split(":")[1])
+    else:
+        playtime = 60 * hour + int(et.split(":")[1]) - int(st.split(":")[1])
+
+    return playtime
+
+
+def solution(m, musicinfos):
     answer = []
-    m = changecode(m)
+    m = changeCode(m)
 
     for idx, musicinfo in enumerate(musicinfos):
         musicinfo = musicinfo.split(",")
         st, et, musicname, code = musicinfo[0], musicinfo[1], musicinfo[2], musicinfo[3]
 
-        hour = 1 * (int(et.split(":")[0]) - int(st.split(":")[0]))
-        if hour == 0:
-            playtime = int(et.split(":")[1]) - int(st.split(":")[1])
-        else:
-            playtime = 60 * hour + int(et.split(":")[1]) - int(st.split(":")[1])
-
-        code = changecode(code)
+        playtime = getTime(st, et)
+        code = changeCode(code)
 
         if len(code) >= playtime:
             melody = code[0:playtime]
@@ -34,10 +40,7 @@ def sol(m, musicinfos):
 
     if len(answer) != 0:
         answer.sort(key=lambda x: (-x[1], x[0]))
+        print(answer)
         return answer[0][2]
+
     return "(None)"
-
-m = "ABCDEFG"
-musicinfos = ["12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"]
-
-print(sol(m, musicinfos))
