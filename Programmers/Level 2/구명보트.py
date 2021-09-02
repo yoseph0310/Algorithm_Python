@@ -10,6 +10,7 @@ def solution(people, limit):
         if people[j] + people[i] <= limit:
             i += 1
         j -= 1
+
     return cnt
 
 print(solution(people, limit))
