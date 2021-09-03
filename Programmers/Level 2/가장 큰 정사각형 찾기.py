@@ -19,6 +19,7 @@ def sol(board):
         temp = max(dp[i])
         answer = max(answer, temp)
 
+
     return answer**2
 
 
