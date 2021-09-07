@@ -16,4 +16,3 @@ def solution(sticker):
         table1[i] = max(table1[i - 1], table1[i - 2] + sticker[i])
 
     return max(value, max(table1))
-
