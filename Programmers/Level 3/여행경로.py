@@ -1,5 +1,6 @@
 tickets = [["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]]
 
+
 def sol(tickets):
     answer = []
     tickets.sort()
