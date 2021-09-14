@@ -1,4 +1,5 @@
 def solution(n, s):
+
     if n > s: return [-1]
     answer = []
 
