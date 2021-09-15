@@ -1,4 +1,5 @@
 def solution(n, stations, w):
+
     answer = 0
     idx = 0
     locate = 1
