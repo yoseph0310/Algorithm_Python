@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline().rstrip()
 answer = 0
 
