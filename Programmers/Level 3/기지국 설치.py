@@ -10,5 +10,4 @@ def solution(n, stations, w):
         else:
             locate = 2*w + 1
             answer += 1
-
     return answer
