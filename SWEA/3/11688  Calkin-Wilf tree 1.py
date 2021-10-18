@@ -13,6 +13,5 @@ for t in range(1, T+1):
         elif s == 'R':
             a = a + b
             b = b
-
     print('#{} {} {}'.format(t, a, b))
 
