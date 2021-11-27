@@ -1,5 +1,4 @@
 address = list(input().split(":"))
-
 idx = 0
 ans = ['' for _ in range(8)]
 flag = 0
