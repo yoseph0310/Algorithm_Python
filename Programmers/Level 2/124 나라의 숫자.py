@@ -4,4 +4,3 @@ def sol(n):
     else:
         q, r = divmod(n-1, 3)
         return sol(q) + '124'[r]
-
