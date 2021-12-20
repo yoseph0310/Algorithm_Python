@@ -3,5 +3,4 @@ def sol(n, left, right):
 
     for i in range(left, right+1):
         answer.append(max(divmod(i, n))+1)
-
     return answer
