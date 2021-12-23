@@ -7,7 +7,6 @@ def changeCode(m):
 
     return m
 
-
 def getTime(st, et):
     hour = 1 * (int(et.split(":")[0]) - int(st.split(":")[0]))
     if hour == 0:
