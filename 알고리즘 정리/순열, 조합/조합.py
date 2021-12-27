@@ -1,19 +1,16 @@
-def combination(arr, r):
-    arr = sorted(arr)
-    used = [0 for _ in range(len(arr))]
+nums = [1,2,3,4,5]
 
-    def generate(chosen):
-        if len(chosen) == r:
-            print(chosen)
-            return
+answer_list = []
 
-        start = arr.index(chosen[-1]) + 1 if chosen else 0
-        for nxt in range(start, len(arr)):
-            if used[nxt] == 0 and (nxt == 0 or arr[nxt-1] != arr[nxt] or used[nxt-1]):
-                chosen.append(arr[nxt])
-                used[nxt] = 1
-                generate(chosen)
-                chosen.pop()
-                used[nxt] = 0
+def combination(n, ans):
+    if n == len(nums):
+        temp = [i for i in ans]
+        answer_list.append(temp)
+        return
+    ans.append(nums[n])
+    combination(n + 1, ans)
+    ans.pop()
+    combination(n + 1, ans)
 
-    generate([])
+combination(0, [])
+print(answer_list)
