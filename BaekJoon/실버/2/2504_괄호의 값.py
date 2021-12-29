@@ -2,7 +2,6 @@ import sys
 input = sys.stdin.readline
 
 bracket = list(input())
-
 stack = []
 ans = 0
 tmp = 1
