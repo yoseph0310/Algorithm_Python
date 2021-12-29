@@ -1,15 +1,15 @@
 import sys
 from itertools import permutations as perm
-
 input = sys.stdin.readline
+
 N = int(input())
 numbers = list(map(int, input().split()))
-op_num = list(map(int, input().split())) # 0 0 1 0
+op_nums = list(map(int, input().split()))   # 0 0 1 0
 op_list = ['+', '-', '*', '/']
 op = []
 
-for i in range(len(op_num)):
-    for j in range(op_num[i]):
+for i in range(len(op_nums)):
+    for j in range(op_nums[i]):
         op.append(op_list[i])
 
 maximum = -1e9
@@ -20,13 +20,13 @@ def solve():
     for case in perm(op, N-1):
         ans = numbers[0]
         for r in range(1, N):
-            if case[r - 1] == '+':
+            if case[r-1] == '+':
                 ans += numbers[r]
-            elif case[r - 1] == '-':
+            elif case[r-1] == '-':
                 ans -= numbers[r]
-            elif case[r - 1] == '*':
+            elif case[r-1] == '*':
                 ans *= numbers[r]
-            elif case[r - 1] == '/':
+            elif case[r-1] == '/':
                 ans = int(ans / numbers[r])
 
         if ans > maximum:
