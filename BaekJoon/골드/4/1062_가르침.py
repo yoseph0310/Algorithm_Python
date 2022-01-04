@@ -1,45 +1,29 @@
-import sys
+from itertools import combinations
 n, k = map(int, input().split())
-
 if k < 5:
     print(0)
-    exit()
-elif k == 26:
-    print(n)
-    exit()
+else:
+    k -= 5
+    n_chars = {'a', 'c', 'i', 'n', 't'}
+    input_chars = []
+    alpha = {k: v for v, k in enumerate((set(map(chr, range(ord('a'), ord('z')+1))) - n_chars))}
+    cnt = 0
 
-ans = 0
-words = [set(sys.stdin.readline().rstrip()) for _ in range(n)]
-learn = [0] * 26
+    for _ in range(n):
+        tmp = 0
+        for c in set(input()) - n_chars:
+            tmp |= (1 << alpha[c])
+        input_chars.append(tmp)
 
-for c in ('a', 'c', 'i', 'n', 't'):
-    learn[ord(c) - ord('a')] = 1
+    power_by_2 = (2**i for i in range(21))
+    for comb in combinations(power_by_2, k):
+        test = sum(comb)
 
-def dfs(idx, cnt):
-    global ans
+        ct = 0
+        for cb in input_chars:
+            if test & cb == cb:
+                ct += 1
 
-    # 종료
-    if cnt == k - 5:
-        rcnt = 0
-        for word in words:
-            check = True
-            for w in word:
-                if not learn[ord(w) - ord('a')]:
-                    check = False
-                    break
+        cnt = max(cnt, ct)
 
-            if check:
-                rcnt += 1
-
-        ans = max(ans, rcnt)
-        return
-
-    # 반복
-    for i in range(idx, 26):
-        if not learn[i]:
-            learn[i] = True
-            dfs(i, cnt + 1)
-            learn[i] = False
-
-dfs(0, 0)
-print(ans)
+    print(cnt)
