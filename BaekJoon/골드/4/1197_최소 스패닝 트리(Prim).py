@@ -3,8 +3,8 @@ import heapq
 input = sys.stdin.readline
 
 V, E = map(int, input().split())
-visited = [False] * (V + 1)
-Elist = [[] for _ in range(V + 1)]
+visited = [False] * (V+1)
+Elist = [[] for _ in range(V+1)]
 heap = [[0, 1]]
 for _ in range(E):
     s, e, w = map(int, input().split())
