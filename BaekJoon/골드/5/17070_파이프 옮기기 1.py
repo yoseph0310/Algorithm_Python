@@ -28,7 +28,6 @@ def dfs(x, y, shape):
             if graph[x+1][y] == 0 and graph[x][y+1] == 0 and graph[x+1][y+1] == 0:
                 dfs(x+1, y+1, 2)
 
-
 N = int(input())
 graph = []
 for _ in range(N):
