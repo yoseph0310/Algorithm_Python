@@ -15,6 +15,7 @@ for i in range(len(op_nums)):
 maximum = -1e9
 minimum = 1e9
 
+
 def solve():
     global maximum, minimum
     for case in perm(op, N-1):
