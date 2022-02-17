@@ -24,6 +24,7 @@ def dfs(depth, total, plus, minus, mul, div):
     if div:
         dfs(depth + 1, int(total / numbers[depth]), plus, minus, mul, div - 1)
 
+
 dfs(1, numbers[0], op[0], op[1], op[2], op[3])
 print(maximum)
 print(minimum)
