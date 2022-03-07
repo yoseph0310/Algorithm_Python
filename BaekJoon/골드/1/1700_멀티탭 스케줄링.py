@@ -15,7 +15,6 @@ for i in range(K):
         plug.append(kind[i])
         continue
 
-
     # 플러그에 자리도 없고 kind[i]가 없으면 다음 사용순서가 없거나 가장 먼 용품을 뽑는다.
     idxs = []
     for j in range(N):
