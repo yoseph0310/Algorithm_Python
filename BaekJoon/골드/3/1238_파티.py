@@ -13,6 +13,7 @@ for _ in range(M):
     graph[s].append([w, e])
     rev_graph[e].append([w, s])
 
+
 def dijkstra(start, graph):
     distances = [INF] * (N + 1)
     distances[start] = 0
