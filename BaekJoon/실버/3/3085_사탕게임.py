@@ -5,6 +5,7 @@ N = int(input())
 board = [list(input()) for _ in range(N)]
 ans = 0
 
+
 def check(b, sr, er, sc, ec):
     length = len(b)
     res = 0
